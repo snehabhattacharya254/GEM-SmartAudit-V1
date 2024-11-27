@@ -1,0 +1,15 @@
+boto3
+langchain
+cryptography
+streamlit
+requests
+Pillow
+regex
+requests
+streamlit-extras
+anthropic
+python-dotenv
+langchain-aws
+langchain-community
+langchain
+langchain-core
