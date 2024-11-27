@@ -12,10 +12,10 @@ from PIL import Image
 # AWS_SESSION_TOKEN = os.getenv('AWS_SESSION_TOKEN')
 # REGION_NAME = os.getenv('REGION_NAME')
 
-AWS_ACCESS_KEY_ID = st.secrets['Default']['AWS_ACCESS_KEY_ID']
-AWS_SECRET_ACCESS_KEY = st.secrets['Default']['AWS_SECRET_ACCESS_KEY']
-AWS_SESSION_TOKEN = st.secrets['Default']['AWS_SESSION_TOKEN']
-REGION_NAME = st.secrets['Default']['REGION_NAME']
+AWS_ACCESS_KEY_ID = st.secrets['AWS_ACCESS_KEY_ID']
+AWS_SECRET_ACCESS_KEY = st.secrets['AWS_SECRET_ACCESS_KEY']
+AWS_SESSION_TOKEN = st.secrets['AWS_SESSION_TOKEN']
+REGION_NAME = st.secrets['REGION_NAME']
 
 icon = Image.open(r"favicon-16x16.png")
 st.set_page_config(page_title="Takeda SmartAudit", page_icon=icon)

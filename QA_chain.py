@@ -16,10 +16,10 @@ from langchain_community.chat_message_histories import StreamlitChatMessageHisto
 # instantiating knowledge base
 load_dotenv()
 
-AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
-AWS_SESSION_TOKEN = os.getenv('AWS_SESSION_TOKEN')
-REGION_NAME = os.getenv('REGION_NAME')
+AWS_ACCESS_KEY_ID = st.secrets['AWS_ACCESS_KEY_ID']
+AWS_SECRET_ACCESS_KEY = st.secrets['AWS_SECRET_ACCESS_KEY']
+AWS_SESSION_TOKEN = st.secrets['AWS_SESSION_TOKEN']
+REGION_NAME = st.secrets['REGION_NAME']
 
 bedrock_model = boto3.client(
     service_name="bedrock-runtime",

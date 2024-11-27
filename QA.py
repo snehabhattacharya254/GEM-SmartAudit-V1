@@ -15,10 +15,10 @@ load_dotenv()
 # AWS_SESSION_TOKEN = os.getenv('AWS_SESSION_TOKEN')
 # REGION_NAME = os.getenv('REGION_NAME')
 
-AWS_ACCESS_KEY_ID = st.secrets['Default']['AWS_ACCESS_KEY_ID']
-AWS_SECRET_ACCESS_KEY = st.secrets['Default']['AWS_SECRET_ACCESS_KEY']
-AWS_SESSION_TOKEN = st.secrets['Default']['AWS_SESSION_TOKEN']
-REGION_NAME = st.secrets['Default']['REGION_NAME']
+AWS_ACCESS_KEY_ID = st.secrets['AWS_ACCESS_KEY_ID']
+AWS_SECRET_ACCESS_KEY = st.secrets['AWS_SECRET_ACCESS_KEY']
+AWS_SESSION_TOKEN = st.secrets['AWS_SESSION_TOKEN']
+REGION_NAME = st.secrets['REGION_NAME']
 
 s3 = boto3.client('s3',
                   region_name= "us-east-1",
