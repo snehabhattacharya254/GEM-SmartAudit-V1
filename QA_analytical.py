@@ -101,7 +101,7 @@ def send_prompt_to_chatbot(prompt):
     with st.chat_message("assistant", avatar=avatar):
         st.write(response)
     
-    st.session_state.messages.append({"role": "assistant", "content": response['response']})
+    st.session_state.messages.append({"role": "assistant", "content": response})
     
 prompt_library = {
     "prompt1":"Please provide a summary of all Audit Country - Argentina audits with all details",
