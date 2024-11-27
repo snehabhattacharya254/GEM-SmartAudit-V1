@@ -1,11 +1,11 @@
 import streamlit as st
 import time
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import os
 import boto3
 from datetime import timedelta
 from PIL import Image
-load_dotenv()
+# load_dotenv()
 
 # AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
 # AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
@@ -34,4 +34,5 @@ pg = st.navigation(
         }
 )
 
-pg.run()
+# pg.run()
+print(REGION_NAME)

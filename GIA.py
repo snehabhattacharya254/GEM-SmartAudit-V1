@@ -1,6 +1,6 @@
 import streamlit as st
 from langchain_community.chat_message_histories import StreamlitChatMessageHistory
-from QA_chain import run_chain, extract_citations, create_presigned_url, parse_s3_uri,history_chain,chain_citation
+from GIA_chain import run_chain, extract_citations, create_presigned_url, parse_s3_uri,history_chain,chain_citation
 import streamlit as st
 import time
 from dotenv import load_dotenv
@@ -21,20 +21,20 @@ AWS_SESSION_TOKEN = st.secrets['Default']['AWS_SESSION_TOKEN']
 REGION_NAME = st.secrets['Default']['REGION_NAME']
 
 s3 = boto3.client('s3',
-                  region_name=REGION_NAME,
+                  region_name="us-east-1",
                   aws_access_key_id=AWS_ACCESS_KEY_ID,
                   aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
                   aws_session_token=AWS_SESSION_TOKEN)
 
-my_bucket = "ref-pr-detail-trkw-glbl"
-my_prefix = "QA-kb-output3"
+my_bucket = "gia-data-extract"
+my_prefix = "data-extract"
 
 icon = Image.open("favicon-16x16.png")
 # st.set_page_config(page_title="Takeda GIA SmartAudit", page_icon=icon)
 st.logo("takeda_logo.png")
 avatar = Image.open('akiko.png')
 
-st.header("Takeda QA SmartAudit 🤖")
+st.header("Takeda GIA SmartAudit 🤖")
 # Clear Chat History function
 history = StreamlitChatMessageHistory(key="chat_messages")
 # Clear Chat History function
@@ -129,7 +129,7 @@ temp = 0
 col1, col2, col3 = st.columns(3, gap="medium")
 
 with col1:
-    if st.button("Provide details on the pr_id 3419237."):
+    if st.button("Please provide a complete summary of the Investigator Initiated Research issue)"):
         temp = 1
 with col2:
     if st.button("Provide all details of the issue: HCP and Patient Engagements including issue rating, description, action plans and supporting details."):
@@ -145,7 +145,6 @@ if temp == 2:
     send_prompt_to_chatbot(prompt_library['prompt2'])
 if temp == 3:
     send_prompt_to_chatbot(prompt_library['prompt3'])
-
 
 
 
