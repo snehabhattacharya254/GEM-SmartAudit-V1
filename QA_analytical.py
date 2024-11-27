@@ -67,8 +67,8 @@ if prompt := st.chat_input("How can I help you?"):
     # data transformation
         filename = data_save_transform(prompt)
         split_chunks = output_transformed_chunk(filename)
-        summaries = summaries(prompt, split_chunks) # this function has to take in the user query to generate a summary for each chunk
-        cleaned_summaries = [clean_summary(summary) for summary in summaries]
+        summaries_response = summaries(prompt, split_chunks) # this function has to take in the user query to generate a summary for each chunk
+        cleaned_summaries = [clean_summary(summary) for summary in summaries_response]
     
     # this is most likely the context needed to be stored in history
         combined_summary = "\n".join(cleaned_summaries)
@@ -88,8 +88,8 @@ def send_prompt_to_chatbot(prompt):
     with st.spinner("Please wait while I generate a response..."):
         filename = data_save_transform(prompt)
         split_chunks = output_transformed_chunk(filename)
-        summaries = summaries(prompt, split_chunks) # this function has to take in the user query to generate a summary for each chunk
-        cleaned_summaries = [clean_summary(summary) for summary in summaries]
+        summaries_v2 = summaries(prompt, split_chunks) # this function has to take in the user query to generate a summary for each chunk
+        cleaned_summaries = [clean_summary(summary) for summary in summaries_v2]
     
     # this is most likely the context needed to be stored in history
         combined_summary = "\n".join(cleaned_summaries)
