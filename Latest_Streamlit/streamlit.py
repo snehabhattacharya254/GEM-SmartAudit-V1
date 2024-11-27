@@ -17,10 +17,10 @@ AWS_SECRET_ACCESS_KEY = st.secrets['Default']['AWS_SECRET_ACCESS_KEY']
 AWS_SESSION_TOKEN = st.secrets['Default']['AWS_SESSION_TOKEN']
 REGION_NAME = st.secrets['Default']['REGION_NAME']
 
-icon = Image.open("favicon-16x16.png")
+icon = Image.open(r"favicon-16x16.png")
 st.set_page_config(page_title="Takeda SmartAudit", page_icon=icon)
-st.logo("takeda_logo.png")
-avatar = Image.open('akiko.png')
+st.logo(r"takeda_logo.png")
+avatar = Image.open(r'akiko.png')
 
 # Adding QA pages here as sub-pages
 GIA = st.Page("GIA.py", title = "Takeda GIA SmartAudit", icon = "🤖")
