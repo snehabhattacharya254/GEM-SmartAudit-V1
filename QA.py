@@ -121,22 +121,21 @@ def send_prompt_to_chatbot(prompt):
 
 # dictionary of prompts
 prompt_library = {
-    "prompt1":"Please provide a complete summary of the Investigator Initiated Research issue",
-    "prompt2":"Provide all details of the issue: HCP and Patient Engagements including issue rating, description, action plans and supporting details.",
-    "prompt3":"What is the percentage of alignment between the audit's recommendations and remediation action plan for the issue: CRM Interactions Monitoring"
+    "prompt1":"Referencing pr_id 1318886, provide detailed information on the audit conducted by Julian Reeves for Shire Human Genetic Therapies, Inc. (Shire) on Prof. Ludmila Tankova's investigator site. Include the audit's purpose, scope, methodology, and any findings or observations made",
+    "prompt2":"For planning future audits, using pr_id 1318886, provide information on the audit execution (on-site), the audit type (Clinical and Medical Compliance), and any co-auditors involved. Also, include details on the audit distribution list to understand the stakeholders involved",
+    "prompt3":"Could you please provide a detailed summary of the executive summary and audit results with pr_id 2753153?"
 }
 temp = 0
 col1, col2, col3 = st.columns(3, gap="medium")
 
 with col1:
-    if st.button("Provide details on the pr_id 3419237."):
+    if st.button("Referencing pr_id 1318886, provide detailed information on the audit conducted by Julian Reeves for Shire Human Genetic Therapies, Inc. (Shire) on Prof. Ludmila Tankova's investigator site. Include the audit's purpose, scope, methodology, and any findings or observations made"):
         temp = 1
 with col2:
-    if st.button("Provide all details of the issue: HCP and Patient Engagements including issue rating, description, action plans and supporting details."):
+    if st.button("For planning future audits, using pr_id 1318886, provide information on the audit execution (on-site), the audit type (Clinical and Medical Compliance), and any co-auditors involved. Also, include details on the audit distribution list to understand the stakeholders involved"):
         temp = 2
-        
 with col3:
-    if st.button("What is the percentage of alignment between the audit's recommendations and remediation action plan for the issue: CRM Interactions Monitoring"):
+    if st.button("Could you please provide a detailed summary of the executive summary and audit results with pr_id 2753153?"):
         temp = 3
         
 if temp == 1:
