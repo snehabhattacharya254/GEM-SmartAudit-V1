@@ -34,5 +34,4 @@ pg = st.navigation(
         }
 )
 
-# pg.run()
-print(REGION_NAME)
+pg.run()
