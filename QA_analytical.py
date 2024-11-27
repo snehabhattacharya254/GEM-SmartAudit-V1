@@ -109,7 +109,7 @@ prompt_library = {
     "prompt3":"Could you please provide a detailed summary of the executive summary and audit results with pr_id 2753153?"
 }
 temp = 0
-col1, col2, col3 = st.columns(3, gap="medium")
+col1, col2 = st.columns(2, gap="medium")
 
 with col1:
     if st.button("Please provide a summary of all Audit Country - Argentina audits with all details"):
