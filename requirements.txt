@@ -13,3 +13,4 @@ langchain-aws
 langchain-community
 langchain
 langchain-core
+openpyxl
